@@ -1,0 +1,801 @@
+/* General Styling */
+:root{
+    --main-gap: 40px;
+    --main-margin-top:50px;
+    --main-color:#ce1212;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection{
+    background-color:#D85454 ;
+}
+
+p{
+    line-height: 1.5;
+    font-family: "Open Sans", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+}
+
+li{
+    list-style: none;
+}
+.container{
+    width: 90%;
+    margin: auto;
+    padding: 40px 5px;
+    margin-top:50px ;
+}
+
+.heading h2{
+    color: #7f7f90;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.heading p{
+    color: #212529 ;
+    font-family: "Amatic SC",sans-serif;
+    font-size: 50px;
+}
+
+.heading p span{
+    color: #ce1212;
+}
+
+
+/* start of navbar */
+nav{
+    background-color: #fff;
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+nav .container{
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-logo a{
+    color: #212529;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+nav .nav-logo a span{
+    color: var(--main-color);
+}
+
+nav .container i{
+    font-size: 25px;
+}
+
+nav .nav-links ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+nav .nav-links ul li{
+    position: relative;
+}
+
+nav .nav-links ul li::after{
+    content: '';
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    transition: width .5s;
+}
+
+nav .nav-links ul li:hover::after{
+    width: 100%;
+}
+
+
+nav .nav-links li a{
+    font-size: 17px;
+    font-weight: 600;
+    color: #7f7f90;
+    transition: color .5s;
+}
+
+nav .nav-links li a:hover{
+    color: #000;
+}
+/* end of navbar */
+
+/* Start of head section */
+.head{
+    background-color: #EEEEEE;
+    min-height: 100vh;
+    overflow: hidden;
+
+}
+
+.head .container{
+    margin-top: 90px;
+    /* Mobile First */
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+}
+
+.head .head-caption{
+    /* Mobile First */
+    width: 90%;
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.head .head-caption h2{
+    font-family: "Amatic SC", sans-serif;
+    color: #37373F;
+    font-size: 65px;
+    font-weight: 700;
+}
+
+.head .head-caption p{
+    margin: 20px 0px;
+    color: #4F4F5A;
+}
+
+.head .head-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head .head-links .BookTable-link{
+    background-color: var(--main-color);
+    padding: 10px 25px;
+    border-radius: 50px;
+    margin-right: 25px;
+    transition: background-color .5s;
+}
+
+.head .head-links .BookTable-link:hover{
+    background-color: #E61414;
+}
+
+.head .head-links .WatchVideo-link{
+    color: #212529;
+    transition: color .5s;
+    display: flex;
+    align-items: center;
+}
+
+.head .head-links .WatchVideo-link .circle{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-sizing: content-box;
+}
+
+.head .head-links .wrapper{
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgb(206,18,18);
+    background: linear-gradient(90deg, rgba(206,18,18,1) 50%, rgba(238,238,238,1) 50%);
+}
+
+.head .head-links .WatchVideo-link:hover{
+    color: #E61414;
+}
+
+.head .head-img{
+    /* Mobile First */
+    width: 100%;
+}
+
+.head .head-img img{
+    width: 100%;
+}
+/* End of head section */
+
+/* Start of chefs section */
+.chefs{
+    text-align: center;
+    padding-top: 90px;
+}
+
+
+.chefs .allChefs{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: var(--main-gap);
+    margin-top: var(--main-margin-top);
+}
+
+.chefs .allChefs .single-chef{
+    /* Mobile First */
+    width: 90%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+    transition: transform .5s;
+}
+
+
+.chefs .allChefs .single-chef .icons{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 20px;
+    padding: 15px;
+    background-color: #ffffff4d;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 5;
+    top: 20px;
+    right: -50px;
+    transition: right  .5s;
+   
+}
+
+.chefs .allChefs .single-chef .icons i{
+    color: rgb(131, 129, 129);
+    transition: color .5s;
+}
+
+.chefs .allChefs .single-chef .icons i:hover{
+    color: #47464C;
+    cursor: pointer;
+}
+
+.chefs .allChefs .single-chef:hover{
+    transform: scale(1.1 , 1.1);
+
+}
+
+.chefs .allChefs .single-chef:hover .icons{
+    right: 20px;
+}
+
+
+.chefs .allChefs .single-chef img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.chefs .allChefs .single-chef .img-wrapper{
+    position: relative;
+}
+
+.chefs .allChefs .single-chef svg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.chefs .allChefs .single-chef .single-chef-caption{
+    padding: 10px 25px 25px;
+}
+
+.chefs .allChefs .single-chef-caption h3{
+    color: #212529;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.chefs .allChefs .single-chef-caption span{
+    color:  #7F7F90;
+    font-size: 15px;
+    display: block;
+    margin: 5px 0px 10px;
+}
+
+.chefs .allChefs .single-chef-caption p{
+    color:  #7F7F90;
+    font-size: 15px;
+}
+
+/* start of gallery */
+.gallery{
+    background-color: #eee;
+    text-align: center;
+    padding-top: 90px;
+}
+
+.gallery .gallery-pic{
+    columns: 1;
+    column-gap: var(--main-gap);
+    
+}
+
+
+.gallery .gallery-pic .single-pic{
+    margin-bottom: 15px;
+    border: 5px #fff solid;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.gallery .gallery-pic .single-pic .layer{
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 150%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: top .5s;
+}
+
+.gallery .gallery-pic .single-pic .layer h2{
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.gallery .gallery-pic .single-pic .layer p{
+    color: #ddd;
+}
+
+.gallery .single-pic img{
+    width: 100%;
+    transition: transform .5s;
+}
+
+.gallery .gallery-pic .single-pic:hover img{
+    transform: scale(1.1, 1.1);
+}
+
+.gallery .gallery-pic .single-pic:hover .layer{
+    top: 0;
+}
+/* end of gallery */
+
+
+/* Start of contact */
+.contact{
+    background-color: #fff;
+    padding-top: 90px;
+}
+
+.contact .heading{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact .contact-info{
+    display: flex;
+    flex-direction: column;
+    gap: var(--main-gap);
+    margin-bottom: 50px;
+}
+
+.contact .contact-info .contact-info-card{
+    background-color: #F5F5F5;
+    padding: 25px;
+    display: flex;
+}
+
+.contact .contact-info .contact-info-card .info{
+    margin-left: 15px;
+}
+
+.contact .contact-info .contact-info-card .info span{
+    font-weight: bold;
+}
+
+.contact .contact-info .contact-info-card .info h3{
+    margin-bottom: 5px;
+    color: #7D7D7D;
+    font-size: 20px;
+}
+
+.contact .contact-info .icon{
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.contact .contact-info .icon i{
+    font-size: 20px;
+    color: #fff;
+}
+
+.contact .form{
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--main-gap);
+    padding: 20px;
+}
+
+.contact .form input,textarea{
+    border: #E8E3E3 solid 1.6px;
+    padding: 15px;
+}
+
+
+/* End of contact */
+
+
+/* start of footer */
+footer{
+    background-color: #110E0F;
+    box-shadow: 0px -1px 5px #0007;
+
+
+}
+
+footer .container{
+    display: flex;
+    flex-direction: column;
+    gap: var(--main-gap);
+}
+
+footer .Mealify h2{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+footer .Mealify h2 span{
+    color: var(--main-color);
+}
+
+footer .Mealify h2 img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+footer .Mealify p{
+    margin: 10px 0px;
+    color: #fff;
+}
+
+footer .Mealify .social-media h3{
+    /* border-bottom: 2px solid black; */
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+    margin: 0 0 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+}
+
+footer .Mealify .social-media .icons{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+footer .Mealify .social-media .icons i{
+    font-size: 25px;
+    color: #fff;
+}
+
+
+footer .joinUs h3{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+}
+
+footer .joinUs p{
+    color: #fff;
+    margin: 10px 0;
+}
+
+footer .joinUs .subscribe{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+footer .joinUs input,button{
+    
+    padding: 10px;
+    border: none;
+}
+
+footer .joinUs button{
+    background-color: var(--main-color);
+    color: #fff;
+    transition: background-color 1s;
+}
+
+footer .joinUs button i{
+    margin-right: 5px;
+}
+
+footer .joinUs button:hover{
+    background-color: #E61414;
+    cursor: pointer;
+}
+
+footer .joinUs ul{
+    display: flex;
+    color: #fff;
+    padding: 10px;
+}
+
+footer .joinUs .first-list,.sec-list{
+    width: 50%;
+}
+
+footer .joinUs li{
+    padding: 5px;
+    position: relative;
+    left: 0;
+    transition: all 1s;
+}
+
+footer .joinUs li:hover{
+    left: 15px;
+    background-color: #222222;
+    cursor: pointer;
+}
+
+footer .getInTouch{
+    color: #fff;
+}
+
+footer .getInTouch h3{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+footer .getInTouch .icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+footer .getInTouch p i{
+    margin-right: 10px;
+    color: var(--main-color);
+    font-size: 20px;
+}
+/* end of footer */
+
+/* Media Query */
+
+@media screen and (min-width:578px) {
+    /* footer */
+    footer .joinUs .subscribe{
+        flex-direction: row;
+    }
+
+    footer .joinUs input{
+        width:70%;
+    }
+
+    footer .joinUs button{
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .chefs .allChefs .single-chef{
+        width: calc((100% - var(--main-gap))/2);
+        flex-grow: 1;
+    }
+
+    .chefs .allChefs .third-chef{
+        flex-grow: 0;
+        width: 48%;
+    }
+
+    .chefs .allChefs{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /* gallery */
+    .gallery .gallery-pic{
+        columns: 2;
+    } 
+
+    .gallery .gallery-pic .steaks{
+        order:5;
+    }
+    .gallery .gallery-pic .burger{
+        order: 2;
+    }
+    .gallery .gallery-pic .levitation-pizza{
+        order: 3;
+    }
+    .gallery .gallery-pic .chicken{
+        order: 6;
+    }
+    .gallery .gallery-pic .frittata{
+        order: 4;
+    }
+    
+    .gallery .gallery-pic .kebab{
+        order: 7;
+    }
+
+    /* contact */
+    .contact .contact-info{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .contact .contact-info .contact-info-card{
+        width: calc((100% - var(--main-gap))/2);
+    }
+
+    /* footer */
+    footer .container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    footer .Mealify{
+        width: calc((100% - var(--main-gap))/2);
+
+    }
+    footer .joinUs{
+        width: 100%;
+        order: 1;
+
+    }
+    footer .getInTouch{
+        width: calc((100% - var(--main-gap))/2);
+
+       
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+    /* navbar */
+    nav{
+        padding: 20px 0;
+        position: fixed;
+        z-index: 100;
+    }
+
+    nav .nav-links ul{
+        flex-direction: row;
+
+    }
+    /* Headd */
+    .head .container{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    .head .head-caption{
+        width: 40%;
+        text-align: left;
+    }
+
+    .head .head-img{
+        width: 40%;
+    }
+
+    .head .head-links{
+        justify-content: flex-start;
+    }
+
+    .head .head-links .BookTable-link{
+        border-top-left-radius: 0%;
+    }
+    /* chefs */
+    .chefs .allChefs .single-chef{
+        width: 30%;
+        /* flex-grow: 1; */
+    }
+
+    /* gallery */
+    .gallery .gallery-pic{
+        columns: 3;
+    }
+  
+    .gallery .gallery-pic .steaks{
+        order:3;
+    }
+    .gallery .gallery-pic .burger{
+        order: 5;
+    }
+    .gallery .gallery-pic .levitation-pizza{
+        order: 2;
+    }
+    .gallery .gallery-pic .chicken{
+        order: 6;
+    }
+    .gallery .gallery-pic .frittata{
+        order: 4;
+    }
+    
+    .gallery .gallery-pic .kebab{
+        order: 7;
+    }
+
+    /* footer */
+    footer .container{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
+    }
+
+    footer .Mealify{
+        width: calc((100% - var(--main-gap))/4);
+        order: 1;
+    }
+    footer .joinUs{
+        width: calc((100% - var(--main-gap))/2);
+        order: 2;
+    }
+    footer .getInTouch{
+        width: calc((100% - var(--main-gap))/4);
+       order: 3;
+    }
+   
+}
+
